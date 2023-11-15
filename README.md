@@ -1,0 +1,1 @@
+start-project.bat small script to save time launching mongo server and nodemon
