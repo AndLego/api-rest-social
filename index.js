@@ -21,8 +21,14 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 //cargar conf rutas
+const UserRoutes = require("./routes/user")
+const PublicationRoutes = require("./routes/publication")
+
+app.use("/api", UserRoutes)
+app.use("/api", PublicationRoutes)
 
 //ruta de prueba
+/*
 app.get("/ruta-prueba", (req, res) => {
     return res.status(200).json(
         {
@@ -32,6 +38,7 @@ app.get("/ruta-prueba", (req, res) => {
         }
     )
 })
+*/
 
 //poner servidor a escuchar
 
